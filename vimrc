@@ -30,13 +30,14 @@ inoremap 「 「」<Left>
 inoremap /* /**/<Left><Left>
 inoremap {<Enter> {}<Left><CR><ESC><<<S-o>
 inoremap <S-Tab> <ESC><<<S-a>
-nnoremap <Down> gj
-nnoremap <Up> gk
 nnoremap :Q :q!
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
+nnoremap ; :
+nnoremap <Down> gj
+nnoremap <Up> gk
 
-set clipboard=unnamed,autoselect
+set clipboard=unnamedplus
 
 set number
 set noruler
