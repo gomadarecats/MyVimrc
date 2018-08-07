@@ -30,7 +30,7 @@ inoremap 「 「」<Left>
 inoremap /* /**/<Left><Left>
 inoremap {<Enter> {}<Left><CR><ESC><<<S-o>
 inoremap <S-Tab> <ESC><<<S-a>
-nnoremap :Q :q!
+nnoremap :<S-q> :q!
 nnoremap <Tab> >>
 nnoremap \<C-i> <C-i>
 nnoremap <S-Tab> <<
