@@ -32,6 +32,7 @@ inoremap {<Enter> {}<Left><CR><ESC><<<S-o>
 inoremap <S-Tab> <ESC><<<S-a>
 nnoremap :Q :q!
 nnoremap <Tab> >>
+nnoremap \<C-i> <C-i>
 nnoremap <S-Tab> <<
 nnoremap ; :
 nnoremap <Down> gj
