@@ -27,7 +27,6 @@ inoremap " ""<Left>
 inoremap ` ``<Left>
 inoremap （ （）<Left>
 inoremap 「 「」<Left>
-inoremap /* /**/<Left><Left>
 inoremap {<Enter> {}<Left><CR><ESC><<<S-o>
 inoremap <S-Tab> <ESC><<<S-a>
 nnoremap :<S-q> :q!
