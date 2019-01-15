@@ -6,7 +6,7 @@ set nocompatible
 set backspace=indent,eol,start
 
 augroup enhancedime
-    autocmd!
+  autocmd!
 augroup END
 
 set expandtab
@@ -60,25 +60,25 @@ set noswapfile
 set nobackup
 
 augroup enhancedime
-    autocmd InsertLeave * call IME()
-    autocmd InsertLeave * call ESC()
-    autocmd InsertEnter * call INS()
+  autocmd InsertLeave * call IME()
+  autocmd InsertLeave * call ESC()
+  autocmd InsertEnter * call INS()
 augroup END
 
 function IME()
-    let g:imstat =  system('fcitx-remote')
+  let g:imstat =  system('fcitx-remote')
 endfunction
 
 function ESC()
-    if (g:).imstat == 2
-        call system('fcitx-remote -c')
-    endif
+  if (g:).imstat == 2
+    call system('fcitx-remote -c')
+  endif
 endfunction
 
 function INS()
-    if exists('g:imstat')
-        if (g:).imstat == 2
-            call system('fcitx-remote -o')
-        endif
+  if exists('g:imstat')
+    if (g:).imstat == 2
+      call system('fcitx-remote -o')
     endif
+  endif
 endfunction
