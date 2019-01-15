@@ -1,4 +1,6 @@
+set encoding=utf-8
 scriptencoding utf-8
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 
 set nocompatible
 set backspace=indent,eol,start
@@ -8,9 +10,11 @@ augroup enhancedime
 augroup END
 
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set smartindent
 set autoindent
 set wrapscan
