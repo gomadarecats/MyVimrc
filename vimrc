@@ -1,27 +1,36 @@
+scriptencoding utf-8
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 set fileformats=unix,dos,mac
 
 set nocompatible
 set backspace=indent,eol,start
+set formatoptions+=mM
 
 augroup enhancedime
   autocmd!
 augroup END
 
 set expandtab
-
-set expandtab
 set tabstop=2
-set softtabstop=2
 set shiftwidth=2
-set smartindent
+set softtabstop=2
 set autoindent
-set wrapscan
-set showmatch
-set wildmenu
-set formatoptions+=mM
+set smartindent
 
+set wrapscan
+set wildmenu
+
+nnoremap <Esc><Esc> :noh<CR>
+nnoremap ; :
+nnoremap :<S-q> :q!
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+nnoremap <Down> gj
+nnoremap <Up> gk
+cnoremap ;<S-q> q!
+cnoremap ;vdiff vertical diffsplit
+cnoremap ;vsed %s
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
@@ -29,35 +38,31 @@ inoremap < <><Left>
 inoremap ' ''<Left>
 inoremap " ""<Left>
 inoremap ` ``<Left>
-inoremap （ （）<Left>
-inoremap 「 「」<Left>
-inoremap {<Enter> {}<Left><CR><ESC><<<S-o>
-inoremap <S-Tab> <ESC><<<S-a>
-nnoremap :<S-q> :q!
-nnoremap <Tab> >>
-nnoremap \<C-i> <C-i>
-nnoremap <S-Tab> <<
-nnoremap ; :
-nnoremap <Down> gj
-nnoremap <Up> gk
-
-set clipboard=unnamedplus
+inoremap {<CR> {}<Left><CR><Esc><<<S-o>
+inoremap <S-Tab> <Esc><<<S-a>
 
 set number
 set noruler
 set nolist
 set wrap
-set incsearch
 set laststatus=1
 set cmdheight=1
 set showcmd
 set title
+set relativenumber
+set clipboard=unnamed,autoselect
 set syntax=on
 
-colorscheme pablo
-
-set noswapfile
 set nobackup
+set noswapfile
+set noundofile
+
+set browsedir=buffer
+
+set splitbelow
+set splitright
+
+colorscheme pablo
 
 augroup enhancedime
   autocmd InsertLeave * call IME()
